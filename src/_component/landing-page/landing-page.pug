@@ -1,0 +1,24 @@
+-
+    var myFullName = "Marco Caramaschi";
+    var myJobTitle = "Junior Web Developer";
+    var socialList = [
+        {icon: "facebook2", url: "https://facebook.com/marcopcaramaschi"},
+        {icon: "twitter", url: "https://twitter.com/marco981"},
+        {icon: "google-plus3", url: "https://facebook.com/marcopcaramaschi"},
+        {icon: "github", url: "https://facebook.com/marcopcaramaschi"},
+        {icon: "linkedin", url: "https://facebook.com/marcopcaramaschi"},
+        {icon: "stackoverflow", url: "https://facebook.com/marcopcaramaschi"},
+        {icon: "mail2", url: "https://facebook.com/marcopcaramaschi"},
+        {icon: "file-word", url: "https://facebook.com/marcopcaramaschi"},
+        {icon: "earth", url: "http:www.marcocaramaschi.com"},
+    ]
+#landing-page
+.landing-page
+    .landing-page__wrapper
+        h1.landing-page___name=myFullName
+        h2.landing-page___title=myJobTitle
+        ul.landing-page__social
+            each social in socialList
+                li.landing-page__item
+                    label.landing-page__label(for="")
+                        span(class=`my-cv__icon--${social.icon}`)
