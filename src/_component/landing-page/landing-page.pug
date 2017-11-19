@@ -2,21 +2,21 @@
     var myFullName = "Marco Caramaschi";
     var myJobTitle = "Junior Web Developer";
     var socialList = [
+        {icon: "linkedin", url: "https://www.linkedin.com/in/marco-caramaschi/"},
+        {icon: "earth", url: "http://www.marcocaramaschi.com"},
+        {icon: "github", url: "https://github.com/Marco981"},
+        {icon: "stackoverflow", url: "https://stackoverflow.com/users/8660022/marco-pietro-caramaschi"},
         {icon: "facebook2", url: "https://facebook.com/marcopcaramaschi"},
         {icon: "twitter", url: "https://twitter.com/marco981"},
-        {icon: "google-plus3", url: "https://facebook.com/marcopcaramaschi"},
-        {icon: "github", url: "https://facebook.com/marcopcaramaschi"},
-        {icon: "linkedin", url: "https://facebook.com/marcopcaramaschi"},
-        {icon: "stackoverflow", url: "https://facebook.com/marcopcaramaschi"},
+        {icon: "google-plus3", url: "https://plus.google.com/+MarcoPietroCaramaschi"},
         {icon: "mail2", url: "https://facebook.com/marcopcaramaschi"},
         {icon: "file-word", url: "https://facebook.com/marcopcaramaschi"},
-        {icon: "earth", url: "http:www.marcocaramaschi.com"},
     ]
 #landing-page
 .landing-page
     .landing-page__wrapper
-        h1.landing-page___name=myFullName
-        h2.landing-page___title=myJobTitle
+        h1.landing-page__name=myFullName
+        h2.landing-page__title=myJobTitle
         ul.landing-page__social
             each social, key in socialList
                 li.landing-page__item
@@ -31,4 +31,4 @@
             each social,key in socialList
                 input.landing-page__box-radio(type="radio", name="awesome-radio" id=`message-box-id-${key}`)
                 .landing-page__box-message
-                    a.landing-page___box-link(href="social.url", target="_blank")=social.url
+                    a.landing-page__box-link(href="social.url", target="_blank")=social.url
