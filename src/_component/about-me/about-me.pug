@@ -1,0 +1,34 @@
+-
+    var myFullName = "Marco Caramaschi"
+    var myTitle = "Junior Web Developer"
+    var header = "#about me"
+    var imgPath = "asset/image/me.jpg"
+    var slogan = `My passion is to create the web and translate designs into front-end interfaces. Technology flows through my veins so I can make the front-end world a better place. I love to meet like-minded people, so: Let’s chat!`
+    var coolStuff = {
+        title: "grab cool stuff",
+        linkList: [
+            {
+            url:"http://github.com/Marco981/my-cv",
+            icon:"github",
+            text:"Click to visit the GitHub project source"
+            },{
+                url:"asset/doc/marco-cv.docx",
+                icon:"file-word",
+                text:`Click to download the Microsoft Word version`
+            }
+        ]
+    }
+#about-me
+.about-me
+    .about-me__header=header
+    .about-me__avatar-wrapper
+        img.about-me__avatar(src=imgPath)
+    p=slogan
+    .about-me__full-name=myFullName
+    .about-me__title=myTitle
+    .about-me__link-list
+        each link in coolStuff.linkList
+            a.about-me__link(href=link.url)
+            span.about-me__link-description=link.text
+            span(class=`my-cv__icon-${link.icon}`)
+            
