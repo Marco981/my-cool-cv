@@ -5,7 +5,7 @@
     var imgPath = "asset/image/me.jpg"
     var slogan = `My passion is to create the web and translate designs into front-end interfaces. Technology flows through my veins so I can make the front-end world a better place. I love to meet like-minded people, so: Let’s chat!`
     var coolStuff = {
-        title: "grab cool stuff",
+        title: "have a taste of my works or grab a copy of my CV here:",
         linkList: [
             {
             url:"http://github.com/Marco981/my-cv",
@@ -26,9 +26,10 @@
     p=slogan
     .about-me__full-name=myFullName
     .about-me__title=myTitle
+    .about-me__title=coolStuff.title
     .about-me__link-list
         each link in coolStuff.linkList
             a.about-me__link(href=link.url)
-            span.about-me__link-description=link.text
-            span(class=`my-cv__icon-${link.icon}`)
+                span.about-me__link-description=link.text
+                span(class=`my-cv__icon--${link.icon}`)
             
