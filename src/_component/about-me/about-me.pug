@@ -18,14 +18,33 @@
             }
         ]
     }
+    var portfolio = {
+        title: "Portfolio",
+        description: "To discover more about my work and research, please visit my Blog. By clicking the button below you will navigate directly to my personal blog where I share my passion for technology. I am publishing on regular basis new discoveries I have made in coding and programing in general. Your feedback is important to me, please feel free to leave your comments.",
+        link:{
+            url:"http://github.com/Marco981/my-cv",
+            icon:"github",
+            text:`Click to visit the Blog Page`
+        }
+    }
+    var achievements = {
+        title:"Achievements",
+        description: "Building a page that scores 100/100 on Google Page Speed Insights is probably the biggest achievement in my carrier as a Web Developer so far."
+    }
 #about-me
 .about-me
-    .about-me__header=header
+    h2.about-me__header=header
     .about-me__avatar-wrapper
         img.about-me__avatar(src=imgPath)
-    .about-me__full-name=myFullName
-    .about-me__title=myTitle
-    .about-me__slogan=slogan
+    h3.about-me__full-name=myFullName
+    h3.about-me__title=myTitle
+    p.about-me__slogan=slogan
+    h3.portfolio-title=portfolio.title
+    p.portfolio-description=portfolio.description
+    .portfolio__link
+        a.about-me__link(href=portfolio.link.url)
+            span.portfolio__link-description=portfolio.link.text
+            span(class=`my-cv__icon--${portfolio.link.icon}`)
     .about-me__title=coolStuff.title
     .about-me__link-list
         each link in coolStuff.linkList

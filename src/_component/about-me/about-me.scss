@@ -1,13 +1,13 @@
 .about-me {
       background-image: radial-gradient(
           ellipse,
-          var(--color-geraldine),
-          var(--color-cardinal)
+          $color-geraldine,
+          $color-cardinal
           );
 }
     
     .about-me__header {
-      color: var(--color-white);
+      color: $color-white;
       @extend %header;
     }
     
@@ -15,15 +15,17 @@
       font-size: 2.5rem;
     }
     
-    .about-me__title {
+    .about-me__title,
+    .portfolio-title {
       font-size: 2rem;
     }
     
     .about-me__full-name,
-    .about-me__title {
+    .about-me__title,
+    .portfolio-title {
       text-align: center;
-      padding: 2rem 0 1rem;
-      color: var(--color-white);
+      padding: 2rem 1rem;
+      color: $color-white;
     }
     
     p {
@@ -34,14 +36,15 @@
       text-indent: 2rem;
     }
     
-    .about-me__link-list {
+    .about-me__link-list,
+    .portfolio__link {
       text-align: center;
     }
     
     .about-me__link {
-      border: .1rem solid #d1adc2;
-      color: #7ea1a6;
-      background-color: var(--color-white);
+      border: .1rem solid $color-lily;
+      color: $color-gumbo;
+      background-color: $color-white;
       padding: 1rem;
       width: 75%;
       margin: 1rem auto;
@@ -53,7 +56,8 @@
       text-decoration: none;
     }
     
-    .about-me__link-description {
+    .about-me__link-description,
+    .portfolio__link-description {
       text-align: center;
       font-size: 1.5rem;
       line-height: 1.5;
@@ -81,5 +85,13 @@
     .about-me__avatar {
       border-radius: 50%;
       width: 100%;
-      border: .5rem solid #B21E32;
+      border: .5rem solid $color-cardinal;
     } 
+
+    .about-me__slogan,
+    .portfolio-description {
+      color:$color-tarawera;
+      max-width: 70%;
+      margin: 0 auto;
+      text-align: center;
+    }
