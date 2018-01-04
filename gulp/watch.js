@@ -51,6 +51,9 @@ const watch = ({
         gulpConfig.fileExpression.font
       ), gulp.series('font'));
 
+      // JS files
+      gulp.watch(path.join(dir.source, '**/*.{js}'), gulp.series('copy'));
+
       // Image files
       gulp.watch(path.join(
         dir.source,
@@ -66,7 +69,7 @@ const watch = ({
 
       // HTML
       gulp.watch([
-        path.join(taskTarget, '**/*.html')
+        path.join(taskTarget, '**/*.{html,js}')
       ], browserSync.reload);
     }
   });
